@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ConfusedSharky : MonoBehaviour
 {
-    [SerializeField] private Player player;
     public float displacement = 0.1f;
 
     void OnMouseDown()
     {
+        Player player = Player.Instance;
         if (player != null)
         {
             int randomValue = Random.Range(0, 2);

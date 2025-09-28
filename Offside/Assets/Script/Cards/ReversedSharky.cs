@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ReversedSharky : MonoBehaviour
 {
-    [SerializeField] private Player player;
     public float displacement = 0.1f;
 
     void OnMouseDown()
     {
+        Player player = Player.Instance;
         if (player != null)
         {
             player.progress = Mathf.Clamp01(player.progress - displacement);

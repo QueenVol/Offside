@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour
 
     private Vector3 targetPos;
 
+    public static Enemy Instance;
+
+    void Awake() => Instance = this;
+
     void Update()
     {
         progress = Mathf.Clamp01(progress);

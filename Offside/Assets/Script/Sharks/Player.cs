@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
 
     private Vector3 targetPos;
 
+    public static Player Instance;
+
+    void Awake() => Instance = this;
+
     void Update()
     {
         progress = Mathf.Clamp01(progress);
