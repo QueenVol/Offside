@@ -8,11 +8,20 @@ public class BloodySharky : MonoBehaviour
 
     void OnMouseDown()
     {
+        CardRuntime runtime = GetComponent<CardRuntime>();
+        if (runtime == null || runtime.IsPlayed) return;
+
+        if (GameManager.Instance != null && GameManager.Instance.IsPlayerLocked)
+        {
+            return;
+        }
+
         Enemy enemy = Enemy.Instance;
         if (enemy != null)
         {
-            enemy.progress = Mathf.Clamp01(enemy.progress - displacement);
+            enemy.Move(-displacement);
         }
-        GetComponent<CardRuntime>().MarkAsPlayed();
+
+        runtime.MarkAsPlayed();
     }
 }

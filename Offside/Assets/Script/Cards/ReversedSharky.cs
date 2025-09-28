@@ -8,11 +8,22 @@ public class ReversedSharky : MonoBehaviour
 
     void OnMouseDown()
     {
+        CardRuntime runtime = GetComponent<CardRuntime>();
+        if (runtime == null || runtime.IsPlayed) return;
+
+        if (GameManager.Instance != null && GameManager.Instance.IsPlayerLocked)
+        {
+            return;
+        }
+
         Player player = Player.Instance;
         if (player != null)
         {
-            player.progress = Mathf.Clamp01(player.progress - displacement);
+            player.Move(-displacement);
+
+            player.movementMultiplier = 3f;
         }
-        GetComponent<CardRuntime>().MarkAsPlayed();
+
+        runtime.MarkAsPlayed();
     }
 }

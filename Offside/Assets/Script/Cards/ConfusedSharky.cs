@@ -8,19 +8,28 @@ public class ConfusedSharky : MonoBehaviour
 
     void OnMouseDown()
     {
+        CardRuntime runtime = GetComponent<CardRuntime>();
+        if (runtime == null || runtime.IsPlayed) return;
+
+        if (GameManager.Instance != null && GameManager.Instance.IsPlayerLocked)
+        {
+            return;
+        }
+
         Player player = Player.Instance;
         if (player != null)
         {
             int randomValue = Random.Range(0, 2);
             if (randomValue == 0)
             {
-                player.progress = Mathf.Clamp01(player.progress + displacement);
+                player.Move(displacement * 2);
             }
             if (randomValue == 1)
             {
-                player.progress = Mathf.Clamp01(player.progress - displacement);
+                player.Move(-displacement);
             }
         }
-        GetComponent<CardRuntime>().MarkAsPlayed();
+
+        runtime.MarkAsPlayed();
     }
 }

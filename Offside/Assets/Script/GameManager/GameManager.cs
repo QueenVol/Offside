@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     public List<CardData> startingDeck;
     public Transform[] handSlots;
+    [SerializeField] private GameObject offsideLine;
 
     public Button startTurnButton;
     public Button endTurnButton;
@@ -18,6 +21,14 @@ public class GameManager : MonoBehaviour
     //private enum TurnState { WaitingToStart, InTurn, TurnEnded }
     private enum TurnState { WaitingToStart, InTurn };
     private TurnState currentState = TurnState.WaitingToStart;
+
+    private int turnCount = 0;
+    private bool playerLocked = false;
+    public bool IsPlayerLocked => playerLocked;
+    public bool freezeEnemyNextTurn = false;
+    public bool immuneThisTurn = false;
+
+    void Awake() => Instance = this;
 
     void Start()
     {
@@ -87,7 +98,18 @@ public class GameManager : MonoBehaviour
     {
         if (currentState != TurnState.WaitingToStart) return;
 
+        if (freezeEnemyNextTurn && Enemy.Instance != null)
+        {
+            Enemy.Instance.isFreeze = true;
+            freezeEnemyNextTurn = false;
+        }
+
         DrawHand(5);
+        if (turnCount % 2 == 1)
+        {
+            offsideLine.SetActive(true);
+        }
+
         currentState = TurnState.InTurn;
         UpdateButtonStates();
         Enemy.Instance.MoveForward(0.2f);
@@ -98,6 +120,22 @@ public class GameManager : MonoBehaviour
         if (currentState != TurnState.InTurn) return;
 
         DiscardHand();
+        turnCount++;
+
+        if(turnCount % 2 == 0)
+        {
+            CheckOffside();
+        }
+        if (turnCount % 2 == 1)
+        {
+            playerLocked = false;
+        }
+
+        offsideLine.SetActive(false);
+
+        Enemy.Instance.isFreeze = false;
+        immuneThisTurn = false;
+
         //currentState = TurnState.TurnEnded;
         currentState = TurnState.WaitingToStart;
         UpdateButtonStates();
@@ -141,9 +179,31 @@ public class GameManager : MonoBehaviour
         endTurnButton.interactable = (currentState == TurnState.InTurn);
     }
 
+    public void LockPlayerThisTurn()
+    {
+        playerLocked = true;
+    }
+
     public void ResetTurn()
     {
         currentState = TurnState.WaitingToStart;
         UpdateButtonStates();
+    }
+
+    private void CheckOffside()
+    {
+        if (Player.Instance != null && Enemy.Instance != null)
+        {
+            if (immuneThisTurn)
+            {
+                return;
+            }
+
+            if (Player.Instance.progress > Enemy.Instance.progress)
+            {
+                Player.Instance.Move(-0.2f);
+                playerLocked = true;
+            }
+        }
     }
 }

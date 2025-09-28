@@ -14,6 +14,11 @@ public class Enemy : MonoBehaviour
 
     public static Enemy Instance;
 
+    public float roundMovementMultiplier = 1f;
+    public float movementMultiplier = 1f;
+
+    public bool isFreeze = false;
+
     void Awake() => Instance = this;
 
     void Update()
@@ -26,7 +31,25 @@ public class Enemy : MonoBehaviour
     }
     public void MoveForward(float amount)
     {
-        progress = Mathf.Clamp01(progress + amount);
+        if (isFreeze)
+        {
+            roundMovementMultiplier = 0f;
+        }
+
+        Move(amount * roundMovementMultiplier);
+
+        roundMovementMultiplier = 1f;
     }
 
+    public void Move(float amount)
+    {
+        if (isFreeze)
+        {
+            movementMultiplier = 0f;
+        }
+
+        progress = Mathf.Clamp01(progress + amount * movementMultiplier);
+
+        movementMultiplier = 1f;
+    }
 }

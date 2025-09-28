@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScarySharky : MonoBehaviour
+public class CuriousFruit : MonoBehaviour
 {
     public float displacement = 0.1f;
 
@@ -19,9 +19,7 @@ public class ScarySharky : MonoBehaviour
         Enemy enemy = Enemy.Instance;
         if (enemy != null)
         {
-            enemy.Move(displacement);
-
-            GameManager.Instance.freezeEnemyNextTurn = true;
+            enemy.roundMovementMultiplier = 0.5f;
         }
 
         runtime.MarkAsPlayed();

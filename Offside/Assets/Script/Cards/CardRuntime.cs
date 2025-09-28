@@ -43,4 +43,6 @@ public class CardRuntime : MonoBehaviour
             spriteRenderer.color = c;
         }
     }
+
+    public bool IsPlayed => isPlayed;
 }

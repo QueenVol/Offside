@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScarySharky : MonoBehaviour
+public class TralaleroTralala : MonoBehaviour
 {
-    public float displacement = 0.1f;
-
     void OnMouseDown()
     {
         CardRuntime runtime = GetComponent<CardRuntime>();
@@ -16,13 +14,7 @@ public class ScarySharky : MonoBehaviour
             return;
         }
 
-        Enemy enemy = Enemy.Instance;
-        if (enemy != null)
-        {
-            enemy.Move(displacement);
-
-            GameManager.Instance.freezeEnemyNextTurn = true;
-        }
+        GameManager.Instance.immuneThisTurn = true;
 
         runtime.MarkAsPlayed();
     }

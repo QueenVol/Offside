@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public static Player Instance;
 
+    public float movementMultiplier = 1f;
+
     void Awake() => Instance = this;
 
     void Update()
@@ -23,5 +25,12 @@ public class Player : MonoBehaviour
         targetPos = Vector3.Lerp(startingPoint.position, finishPoint.position, progress);
 
         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+    }
+
+    public void Move(float amount)
+    {
+        progress = Mathf.Clamp01(progress + amount * movementMultiplier);
+
+        movementMultiplier = 1f;
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScarySharky : MonoBehaviour
+public class CoralReefs : MonoBehaviour
 {
     public float displacement = 0.1f;
 
@@ -16,12 +16,12 @@ public class ScarySharky : MonoBehaviour
             return;
         }
 
+        Player player = Player.Instance;
         Enemy enemy = Enemy.Instance;
-        if (enemy != null)
+        if (player != null && enemy != null)
         {
-            enemy.Move(displacement);
-
-            GameManager.Instance.freezeEnemyNextTurn = true;
+            player.Move(-displacement);
+            enemy.Move(-displacement);
         }
 
         runtime.MarkAsPlayed();
