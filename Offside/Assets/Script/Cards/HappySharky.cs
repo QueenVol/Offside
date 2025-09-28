@@ -13,6 +13,6 @@ public class HappySharky : MonoBehaviour
         {
             player.progress = Mathf.Clamp01(player.progress + displacement);
         }
-        Destroy(gameObject);
+        GetComponent<CardRuntime>().Discard();
     }
 }

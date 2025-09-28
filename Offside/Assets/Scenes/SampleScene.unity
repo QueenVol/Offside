@@ -268,6 +268,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &471293825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471293826}
+  m_Layer: 0
+  m_Name: SlotFive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471293826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471293825}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: -3.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +386,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &528261140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528261141}
+  m_Layer: 0
+  m_Name: SlotOne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528261141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528261140}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -505,6 +567,99 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.12, y: 4.68}
   m_EdgeRadius: 0
+--- !u!1 &959519716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959519717}
+  m_Layer: 0
+  m_Name: SlotTwo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959519717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959519716}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5, y: -3.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1202983470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202983471}
+  m_Layer: 0
+  m_Name: SlotThree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1202983471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202983470}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376015265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376015266}
+  m_Layer: 0
+  m_Name: SlotFour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1376015266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376015265}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.5, y: -3.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1435314780
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +906,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e2e9594224f1940b5cb2412cea5781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingDeck:
+  - {fileID: 11400000, guid: 8ebd38e0715867040ad70890b582d0b0, type: 2}
+  - {fileID: 11400000, guid: 8ebd38e0715867040ad70890b582d0b0, type: 2}
+  - {fileID: 11400000, guid: e5abac5c164e8a6419f5d4f971fd6f99, type: 2}
+  - {fileID: 11400000, guid: e5abac5c164e8a6419f5d4f971fd6f99, type: 2}
+  - {fileID: 11400000, guid: 50313dc1cd8385e49816968c1113889c, type: 2}
+  - {fileID: 11400000, guid: 679f0ce5e58cacf438d351d6c8884c63, type: 2}
+  - {fileID: 11400000, guid: d2be8ff21b3207e48b37210b779fd815, type: 2}
+  handSlots:
+  - {fileID: 528261141}
+  - {fileID: 959519717}
+  - {fileID: 1202983471}
+  - {fileID: 1376015266}
+  - {fileID: 471293826}
 --- !u!1 &1742626486
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +1118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappySharky
       objectReference: {fileID: 0}
+    - target: {fileID: 7698833795004083931, guid: 60d48aa0b71a1484fa63e1aa00b48481, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8462792731845123753, guid: 60d48aa0b71a1484fa63e1aa00b48481, type: 3}
       propertyPath: player
       value: 
@@ -969,6 +1142,10 @@ PrefabInstance:
     - target: {fileID: 1571588955979506461, guid: 9b03d8fb983d8f14db23c422e0fccf79, type: 3}
       propertyPath: m_Name
       value: Confused Sharky
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571588955979506461, guid: 9b03d8fb983d8f14db23c422e0fccf79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2154106576041113037, guid: 9b03d8fb983d8f14db23c422e0fccf79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1075,6 +1252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScarySharky
       objectReference: {fileID: 0}
+    - target: {fileID: 8642605865021105227, guid: 50254142f5bd6f34ca650c519dca480c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1091,6 +1272,10 @@ PrefabInstance:
     - target: {fileID: 1068522009677805566, guid: 4f495fbd38836b441894cd028e5067df, type: 3}
       propertyPath: m_Name
       value: Reversed Sharky
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068522009677805566, guid: 4f495fbd38836b441894cd028e5067df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3889950561263321733, guid: 4f495fbd38836b441894cd028e5067df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1197,6 +1382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BloodySharky
       objectReference: {fileID: 0}
+    - target: {fileID: 6400047896714191272, guid: 16997fdbe792efa4daa45e8fb1b7d19f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1216,6 +1405,11 @@ SceneRoots:
   - {fileID: 462919497}
   - {fileID: 400762722}
   - {fileID: 1983601466}
+  - {fileID: 528261141}
+  - {fileID: 959519717}
+  - {fileID: 1202983471}
+  - {fileID: 1376015266}
+  - {fileID: 471293826}
   - {fileID: 2219959703637258441}
   - {fileID: 3884545439392239734}
   - {fileID: 2720965906702125532}
