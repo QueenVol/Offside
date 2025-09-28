@@ -21,6 +21,6 @@ public class ConfusedSharky : MonoBehaviour
                 player.progress = Mathf.Clamp01(player.progress - displacement);
             }
         }
-        GetComponent<CardRuntime>().Discard();
+        GetComponent<CardRuntime>().MarkAsPlayed();
     }
 }

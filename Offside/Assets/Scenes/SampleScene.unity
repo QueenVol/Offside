@@ -922,7 +922,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 667e588196e3bc44ab2f04f268e8ddd2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 475b0c79114e7674ca3167d6328e5ea3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -930,7 +930,7 @@ SpriteRenderer:
   m_Size: {x: 3.12, y: 4.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &925232189
@@ -1521,11 +1521,13 @@ MonoBehaviour:
   startingDeck:
   - {fileID: 11400000, guid: 8ebd38e0715867040ad70890b582d0b0, type: 2}
   - {fileID: 11400000, guid: 8ebd38e0715867040ad70890b582d0b0, type: 2}
-  - {fileID: 11400000, guid: e5abac5c164e8a6419f5d4f971fd6f99, type: 2}
-  - {fileID: 11400000, guid: e5abac5c164e8a6419f5d4f971fd6f99, type: 2}
-  - {fileID: 11400000, guid: 50313dc1cd8385e49816968c1113889c, type: 2}
-  - {fileID: 11400000, guid: 679f0ce5e58cacf438d351d6c8884c63, type: 2}
+  - {fileID: 11400000, guid: 8ebd38e0715867040ad70890b582d0b0, type: 2}
   - {fileID: 11400000, guid: d2be8ff21b3207e48b37210b779fd815, type: 2}
+  - {fileID: 11400000, guid: d2be8ff21b3207e48b37210b779fd815, type: 2}
+  - {fileID: 11400000, guid: 50313dc1cd8385e49816968c1113889c, type: 2}
+  - {fileID: 11400000, guid: 50313dc1cd8385e49816968c1113889c, type: 2}
+  - {fileID: 11400000, guid: e5abac5c164e8a6419f5d4f971fd6f99, type: 2}
+  - {fileID: 11400000, guid: 679f0ce5e58cacf438d351d6c8884c63, type: 2}
   handSlots:
   - {fileID: 528261141}
   - {fileID: 959519717}

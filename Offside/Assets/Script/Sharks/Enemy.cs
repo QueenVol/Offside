@@ -24,4 +24,9 @@ public class Enemy : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
     }
+    public void MoveForward(float amount)
+    {
+        progress = Mathf.Clamp01(progress + amount);
+    }
+
 }

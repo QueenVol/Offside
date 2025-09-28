@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
         DrawHand(5);
         currentState = TurnState.InTurn;
         UpdateButtonStates();
+        Enemy.Instance.MoveForward(0.2f);
     }
 
     public void EndTurn()

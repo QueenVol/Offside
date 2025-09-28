@@ -13,6 +13,6 @@ public class ScarySharky : MonoBehaviour
         {
             enemy.progress = Mathf.Clamp01(enemy.progress + displacement);
         }
-        GetComponent<CardRuntime>().Discard();
+        GetComponent<CardRuntime>().MarkAsPlayed();
     }
 }
