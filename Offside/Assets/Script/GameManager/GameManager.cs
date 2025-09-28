@@ -1,19 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public List<CardData> startingDeck;
     public Transform[] handSlots;
 
+    public Button startTurnButton;
+    public Button endTurnButton;
+
     private List<CardData> deck = new List<CardData>();
     private List<CardData> discardPile = new List<CardData>();
     private List<GameObject> hand = new List<GameObject>();
+
+    //private enum TurnState { WaitingToStart, InTurn, TurnEnded }
+    private enum TurnState { WaitingToStart, InTurn };
+    private TurnState currentState = TurnState.WaitingToStart;
+
     void Start()
     {
         InitDeck();
-        DrawHand();
+        UpdateButtonStates();
+        //DrawHand(5);
     }
 
     void InitDeck()
@@ -53,11 +63,50 @@ public class GameManager : MonoBehaviour
         return data;
     }
 
-    public void DrawHand()
+    void ClearHand()
+    {
+        foreach (GameObject card in hand)
+        {
+            if (card != null) Destroy(card);
+        }
+        hand.Clear();
+    }
+
+    public void AddToDiscard(CardData card)
+    {
+        discardPile.Add(card);
+    }
+
+    public void AddNewCardToDeck(CardData card)
+    {
+        deck.Add(card);
+        Shuffle(deck);
+    }
+
+    public void StartTurn()
+    {
+        if (currentState != TurnState.WaitingToStart) return;
+
+        DrawHand(5);
+        currentState = TurnState.InTurn;
+        UpdateButtonStates();
+    }
+
+    public void EndTurn()
+    {
+        if (currentState != TurnState.InTurn) return;
+
+        DiscardHand();
+        //currentState = TurnState.TurnEnded;
+        currentState = TurnState.WaitingToStart;
+        UpdateButtonStates();
+    }
+
+    public void DrawHand(int count)
     {
         ClearHand();
 
-        for (int i = 0; i < handSlots.Length; i++)
+        for (int i = 0; i < count && i < handSlots.Length; i++)
         {
             CardData data = DrawCardData();
             if (data != null)
@@ -85,23 +134,15 @@ public class GameManager : MonoBehaviour
         hand.Clear();
     }
 
-    void ClearHand()
+    void UpdateButtonStates()
     {
-        foreach (GameObject card in hand)
-        {
-            if (card != null) Destroy(card);
-        }
-        hand.Clear();
+        startTurnButton.interactable = (currentState == TurnState.WaitingToStart);
+        endTurnButton.interactable = (currentState == TurnState.InTurn);
     }
 
-    public void AddToDiscard(CardData card)
+    public void ResetTurn()
     {
-        discardPile.Add(card);
-    }
-
-    public void AddNewCardToDeck(CardData card)
-    {
-        deck.Add(card);
-        Shuffle(deck);
+        currentState = TurnState.WaitingToStart;
+        UpdateButtonStates();
     }
 }
