@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ade14891a0666844be9ab9b428ebb79, type: 3}
+  m_Name: ReversedSharky
+  m_EditorClassIdentifier: 
+  cardName: Reversed Sharky
+  prefab: {fileID: 1068522009677805566, guid: 4f495fbd38836b441894cd028e5067df, type: 3}

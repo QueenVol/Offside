@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ade14891a0666844be9ab9b428ebb79, type: 3}
+  m_Name: BloodySharky
+  m_EditorClassIdentifier: 
+  cardName: Bloody Sharky
+  prefab: {fileID: 6400047896714191272, guid: 16997fdbe792efa4daa45e8fb1b7d19f, type: 3}
