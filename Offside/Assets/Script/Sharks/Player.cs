@@ -22,9 +22,18 @@ public class Player : MonoBehaviour
     {
         progress = Mathf.Clamp01(progress);
 
+        progress = Mathf.Clamp01(Mathf.Round(progress * 10f) / 10f);
+
         targetPos = Vector3.Lerp(startingPoint.position, finishPoint.position, progress);
 
         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+
+        if (progress >= 1f)
+        {
+            if (GameManager.Instance != null) GameManager.Instance.CheckGameOver();
+        }
+
+        Debug.Log("player: " + progress);
     }
 
     public void Move(float amount)

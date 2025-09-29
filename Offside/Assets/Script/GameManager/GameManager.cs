@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public Button startTurnButton;
     public Button endTurnButton;
 
+    public GameObject panel;
+    public GameObject playerWin;
+    public GameObject enemyWin;
+
     private List<CardData> deck = new List<CardData>();
     private List<CardData> discardPile = new List<CardData>();
     private List<GameObject> hand = new List<GameObject>();
@@ -27,6 +31,7 @@ public class GameManager : MonoBehaviour
     public bool IsPlayerLocked => playerLocked;
     public bool freezeEnemyNextTurn = false;
     public bool immuneThisTurn = false;
+    private bool gameOver = false;
 
     void Awake() => Instance = this;
 
@@ -34,6 +39,8 @@ public class GameManager : MonoBehaviour
     {
         InitDeck();
         UpdateButtonStates();
+        if (panel != null)
+            panel.SetActive(false);
         //DrawHand(5);
     }
 
@@ -204,6 +211,30 @@ public class GameManager : MonoBehaviour
                 Player.Instance.Move(-0.2f);
                 playerLocked = true;
             }
+        }
+    }
+
+    public void CheckGameOver()
+    {
+        if (gameOver) return;
+
+        if (Player.Instance != null && Player.Instance.progress >= 1f)
+        {
+            if (panel != null)
+                panel.SetActive(true);
+            if(playerWin != null)
+                playerWin.SetActive(true);
+            if(enemyWin != null)
+                enemyWin.SetActive(false);
+        }
+        else if (Enemy.Instance != null && Enemy.Instance.progress >= 1f)
+        {
+            if (panel != null)
+                panel.SetActive(true);
+            if (playerWin != null)
+                playerWin.SetActive(false);
+            if (enemyWin != null)
+                enemyWin.SetActive(true);
         }
     }
 }
